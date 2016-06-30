@@ -1,3 +1,3 @@
-class puppet_run {
-  puppy_run::puppet { 'athena': }
+class puppy_run {
+  puppy_run::puppy { 'athena': }
 }
