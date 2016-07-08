@@ -3,7 +3,6 @@ define puppy_run::puppy(
   String $command,
 ){ 
 
-  notify { $name:
-    message => template("puppet_run/${name}.erb")
-  }
+  exec { "/bin/cat /opt/pups/${name}": }
+
 }
