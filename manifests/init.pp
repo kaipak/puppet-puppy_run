@@ -1,5 +1,5 @@
 class puppy_run (
-  $name    = 'athena',
+  $puppy   = 'athena',
   $ensure  = 'happy',
   $command = 'sit!',
 ){
@@ -14,7 +14,7 @@ class puppy_run (
     source => "puppet:///modules/puppy_run/athena.txt",
   }
 
-  puppy_run::puppy { $name: 
+  puppy_run::puppy { $puppy: 
     ensure  => $ensure,
     command => $command,
   }
