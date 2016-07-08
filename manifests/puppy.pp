@@ -3,6 +3,6 @@ define puppy_run::puppy(
   String $command,
 ){ 
 
-  exec { "/bin/cat /opt/pups/${name}": }
+  exec { "/bin/cat /opt/pups/${name}.txt": }
 
 }
