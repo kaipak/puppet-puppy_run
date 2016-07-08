@@ -1,6 +1,8 @@
-class puppy_run {
+class puppy_run (
+  $ensure  = 'happy',
+  $command = 'sit!',
+){
   $kennel = '/opt/pups'
-  puppy_run::puppy { 'athena': }
   
   file { $kennel:
     ensure => directory,
@@ -9,6 +11,11 @@ class puppy_run {
   file { "${kennel}/athena.txt":
     ensure => file,
     source => "puppet:///modules/puppy_run/athena.txt",
+  }
+
+  puppy_run::puppy { 'athena': 
+    ensure  => $ensure,
+    command => $command,
   }
 
 }
